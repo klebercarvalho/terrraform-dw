@@ -28,12 +28,3 @@ resource "ibm_is_subnet" "subnet2" {
   zone                     = local.zone_2
 
 }
-
-resource "ibm_is_subnet" "subnet3" {
-  name                     = "${var.vpc_name}-subnet-3"
-  vpc                      = ibm_is_vpc.vpc1.id
-  resource_group           = data.ibm_resource_group.rg.id
-  total_ipv4_address_count = 256
-  zone                     = local.zone_3
-
-}

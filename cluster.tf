@@ -30,10 +30,6 @@ resource "ibm_container_vpc_cluster" "cluster" {
     name      = local.zone_2
     subnet_id = ibm_is_subnet.subnet2.id
   }
-  zones {
-    name      = local.zone_3
-    subnet_id = ibm_is_subnet.subnet3.id
-  }
 
   /*****************
     OPTIONAL ARGUMENTS
